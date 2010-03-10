@@ -1,0 +1,143 @@
+#header
+{
+  background: transparent url('/img/header.png') scroll no-repeat 0 0;
+  height:42px;
+
+}
+
+#logo
+{
+  background: transparent url('/img/logo.png') scroll no-repeat 0 0;
+  float:left;
+  height:40px;
+	margin-bottom:18px;
+  width:122px;
+}
+
+#logo a
+{
+  display:block;
+  height:40px;
+}
+
+
+#navigationWrapper
+{
+    padding:10px 20px;
+    overflow:hidden;
+}
+
+#navigationWrapper ul
+{
+    float:right;
+    width:475px;
+}
+
+#navigationWrapper ul li
+{
+	display:inline-block;
+}
+
+#navigationWrapper ul li a
+{
+	display:block;
+	height:26px;
+}
+
+#home{
+	background: transparent url('/img/sprite-nav.png') scroll no-repeat -1px -79px;
+	display:block;
+	width:89px;
+}
+
+#work{
+	background: transparent url('/img/sprite-nav.png') scroll no-repeat -89px -79px;
+	display:block;
+	width:92px;
+}
+
+#about{
+	background: transparent url('/img/sprite-nav.png') scroll no-repeat -182px -79px;
+	display:block;
+	width:97px;
+}
+
+#contact{
+	background: transparent url('/img/sprite-nav.png') scroll no-repeat -280px -79px;
+	display:block;
+	width:118px;
+}
+
+#blog{
+	background: transparent url('/img/sprite-nav.png') scroll no-repeat -397px -79px;
+	display:block;
+	width:70px;
+}
+
+#home:hover{
+	background: transparent url('/img/sprite-nav.png') scroll no-repeat -1px -53px;
+	display:block;
+	width:89px;
+}
+
+#work:hover{
+	background: transparent url('/img/sprite-nav.png') scroll no-repeat -89px -53px;
+	display:block;
+	width:92px;
+}
+
+#about:hover{
+	background: transparent url('/img/sprite-nav.png') scroll no-repeat -182px -53px;
+	display:block;
+	width:97px;
+}
+
+#contact:hover{
+	background: transparent url('/img/sprite-nav.png') scroll no-repeat -280px -53px;
+	display:block;
+	width:118px;
+}
+
+#blog:hover{
+	background: transparent url('/img/sprite-nav.png') scroll no-repeat -397px -53px;
+	display:block;
+	width:70px;
+}
+
+
+
+#home.selected{
+	background: transparent url('/img/sprite-nav.png') scroll no-repeat -1px -27px;
+	display:block;
+	width:89px;
+}
+
+#work.selected{
+	background: transparent url('/img/sprite-nav.png') scroll no-repeat -89px -27px;
+	display:block;
+	width:92px;
+}
+
+#about.selected{
+	background: transparent url('/img/sprite-nav.png') scroll no-repeat -182px -27px;
+	display:block;
+	width:97px;
+}
+
+#contact.selected{
+	background: transparent url('/img/sprite-nav.png') scroll no-repeat -280px -27px;
+	display:block;
+	width:118px;
+}
+
+#blog.selected{
+	background: transparent url('/img/sprite-nav.png') scroll no-repeat -397px -27px;
+	display:block;
+	width:70px;
+}
+
+.navRule{
+	color:#fff;
+	clear:both;
+	width:960px;
+}
