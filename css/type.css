@@ -1,0 +1,48 @@
+body{
+  color:#030000;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size:62.5%;
+}
+a, a:visited {
+    color: #226F2D;
+    text-decoration: underline;
+}
+
+a:focus, a:hover, a:active {
+    color: #000;
+    text-decoration: underline;
+}
+
+.moreAnchor, 
+.hideAnchor{
+	font-size:1.6em;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+
+.moreAnchor{
+	bottom:10px;
+	position:absolute;
+}
+
+h2{
+	display:block;
+	font-size:2.4em;
+}
+
+h3{
+	font-size:2em;
+	letter-spacing: -.25px;
+}
+
+h2 span{
+	left:-9999em;
+	position:absolute;
+	top:-9999em;
+}
+
+p{
+	font-size:1.4em;
+	line-height:1.5em;
+	padding-bottom:10px;
+}

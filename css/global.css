@@ -1,0 +1,58 @@
+#ftl {
+    margin: 0 auto;
+}
+
+#ftw {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: transparent url('/img/bg-nav.png') repeat-y scroll 0 0;
+    position: absolute;
+    top: 300px;
+    width: 106px;
+    left: -140px;
+    padding: 10px;
+}
+
+#ftw p{
+    display:none;
+}
+
+button:hover, button:focus {
+    background: none repeat scroll 0 0 #5C5449;
+    border: 1px solid #CFC5AC;
+    color: #CFC5AC !important;
+}
+
+button {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: none repeat scroll 0 0 #CFC5AC ;
+    border: 1px solid #5C5449;
+    color: #5C5449 !important;
+    cursor:pointer;
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    width: 106px;
+}
+
+
+#loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 9999;
+}
+
+#loading h1 {
+    color: white;
+    font-size: 3.6em;
+    left: 38%;
+    margin: 0 auto;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+}
