@@ -1,4 +1,5 @@
 # Ignore all dotfiles...
 .*
+ncode/*
 # except for .gitignore
 !.gitignore
