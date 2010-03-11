@@ -8,8 +8,8 @@
     border-radius: 5px;
     background: transparent url('/img/bg-nav.png') repeat-y scroll 0 0;
     position: absolute;
-    top: 300px;
-    width: 106px;
+    top: 200px;
+    width: 148px;
     left: -140px;
     padding: 10px;
 }
@@ -33,9 +33,8 @@ button {
     color: #5C5449 !important;
     cursor:pointer;
     display: block;
-    font-size: 12px;
-    line-height: 16px;
-    width: 106px;
+    font-size: 38px;
+    line-height: 36px;
 }
 
 

@@ -76,10 +76,9 @@ $(function() {
                                         var currentBank = banks[i];
                                         if (currentLocation.response !== "OK")
                                         {
-                                            throw new Exception("This bank failure was a request failure as well.")
+                                            throw new Error("Bank failure was also a request failure.");
                                         }
-                                        else
-                                        {
+                                        else {
                                             var point = new GLatLng(currentLocation.lat, currentLocation.lng);
                                             var marker = new GMarker(point, markerOptions);
                                             map.addOverlay(marker);
@@ -94,11 +93,18 @@ $(function() {
                                                 map.openInfoWindowHtml(point, myHtml);
                                             });
                                         }
-
                                     }(i));
                                 }
                                 $(this).fadeOut('slow', function() {
-                                    $(infoId).find('p').fadeIn('slow');
+                                    $(infoId)
+                                            .animate(
+                                    {
+                                        top: '0',
+                                        left: '0',
+                                        width: '108px'
+                                    }, 500)
+                                            .find('p')
+                                            .fadeIn('slow');
                                 });
                                 return false;
                             });
@@ -145,4 +151,6 @@ $(window).load(function() {
     $('#loading').fadeOut('slow', function() {
         $.navigation();
     });
+    var pageTracker = _gat._getTracker("UA-3312370-7");
+    pageTracker._trackPageview();
 });
