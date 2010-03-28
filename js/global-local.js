@@ -76,7 +76,7 @@ $(function() {
                                         var currentBank = banks[i];
                                         if (currentLocation.response !== "OK")
                                         {
-                                            throw new Error("Bank failure was also a request failure.");
+                                            $.noop();
                                         }
                                         else {
                                             var point = new GLatLng(currentLocation.lat, currentLocation.lng);

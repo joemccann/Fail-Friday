@@ -13,7 +13,7 @@
 	<link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico" />
     <link href="css/styles.php" rel="stylesheet" type="text/css" media="all" />
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAA6RSvoCTy9i33pRfR0S5vYhSphy-KDRi91sGWceGOprT_0ke6NhRANgts_4egQGH8S7lJC6SFP4hkdw" type="text/javascript"></script>
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAA6RSvoCTy9i33pRfR0S5vYhSphy-KDRi91sGWceGOprT_0ke6NhRANgts_4egQGH8S7lJC6SFP4hkdw" type="text/javascript"></script>
     <script type="text/javascript" src="js/LAB.min.js">
     </script>
 </head>
