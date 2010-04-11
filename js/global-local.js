@@ -54,11 +54,8 @@ $(function() {
                                 if (currentBank.response !== "OK")
                                 {
                                     $.noop();
-                                    console.log('yest')
                                 }
                                 else {
-                                    console.log('no')
-
                                     var point = new GLatLng(currentBank.lat, currentBank.lng);
                                     var marker = new GMarker(point, markerOptions);
                                     map.addOverlay(marker);
