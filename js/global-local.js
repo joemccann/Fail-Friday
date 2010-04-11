@@ -1,7 +1,5 @@
 $(function() {
 
-    var banks = [];
-    var locs;
     var mapId = document.getElementById("ftl");
     var infoId = document.getElementById("ftw");
 
@@ -46,70 +44,52 @@ $(function() {
                 type: 'GET',
                 url: 'latest-GMaps-cache.json',
                 dataType: 'json',
-                success: function(data) {
-                    locs = data;
-                    $.ajax({
-                        type: 'GET',
-                        url: 'latest-YQL-cache.json',
-                        dataType: 'json',
-                        success: function(data) {
-                            MAX = data.query.results.table.tbody.tr.length;
-                            for (var i = 0; i < MAX; i++)
-                            {
-                                var tr = data.query.results.table.tbody.tr[i];
-                                var loc = {
-                                    name: tr.td[0].a.content,
-                                    city: tr.td[1].p,
-                                    state: tr.td[2].p,
-                                    certNumber: tr.td[3].p,
-                                    closingDate: tr.td[4].p,
-                                    dateUpdate: tr.td[5].p
-                                };
-                                banks.push(loc);
-                            }
-
-                            $('#go').click(function() {
-                                for (var i = 0; i < MAX; i++)
+                success: function(locs) {
+                    MAX = locs.length;
+                    $('#go').click(function() {
+                        for (var i = 0; i < MAX; i++)
+                        {
+                            (function(i) {
+                                var currentBank = locs[i];
+                                if (currentBank.response !== "OK")
                                 {
-                                    (function(i) {
-                                        var currentLocation = locs[i];
-                                        var currentBank = banks[i];
-                                        if (currentLocation.response !== "OK")
-                                        {
-                                            $.noop();
-                                        }
-                                        else {
-                                            var point = new GLatLng(currentLocation.lat, currentLocation.lng);
-                                            var marker = new GMarker(point, markerOptions);
-                                            map.addOverlay(marker);
-                                            GEvent.addListener(marker, "click", function() {
-                                                var myHtml = "<p><strong>" +
-                                                             currentBank.name +
-                                                             "</strong></p><p>" +
-                                                             currentLocation.address +
-                                                             "</p><p>Closing Date: " +
-                                                             currentBank.closingDate +
-                                                             "</p>";
-                                                map.openInfoWindowHtml(point, myHtml);
-                                            });
-                                        }
-                                    }(i));
+                                    $.noop();
+                                    console.log('yest')
                                 }
-                                $(this).fadeOut('slow', function() {
-                                    $(infoId)
-                                            .animate(
-                                    {
-                                        top: '0',
-                                        left: '0',
-                                        width: '108px'
-                                    }, 500)
-                                            .find('p')
-                                            .fadeIn('slow');
-                                });
-                                return false;
-                            });
+                                else {
+                                    console.log('no')
+
+                                    var point = new GLatLng(currentBank.lat, currentBank.lng);
+                                    var marker = new GMarker(point, markerOptions);
+                                    map.addOverlay(marker);
+                                    GEvent.addListener(marker, "click", function() {
+                                        var myHtml = "<p><strong>" +
+                                                currentBank.name +
+                                                "</strong></p><p>" +
+                                                currentBank.address +
+                                                "</p><p>Closing Date: " +
+                                                currentBank.closingDate +
+                                                "</p>";
+                                        map.openInfoWindowHtml(point, myHtml);
+                                    });
+                                }
+                            }(i));
                         }
+                        $(this).fadeOut('slow', function() {
+                            $(infoId)
+                                    .animate(
+                            {
+                                top: '0',
+                                left: '0',
+                                width: '108px'
+                            }, 500)
+                                    .find('p')
+                                    .fadeIn('slow');
+                        });
+                        return false;
                     });
+
+
                 }
             });
 
