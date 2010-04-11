@@ -97,7 +97,7 @@ class GoogleMapsLocationCache extends CreateFileCache {
         array_push($points, $this->createCurrentMaxRowsEntry());
 
         // We re-count here in case there was an error in the getLatLng call. MAX_ROWS would be error-prone.
-        $MAX_POINTS = 3;// count($this->banks_);
+        $MAX_POINTS = count($this->banks_);
         for ($i = 0; $i < $MAX_POINTS; $i++)
         {
             array_push($points, $this->getLatLng($this->banks_[$i]['city'] . "," . $this->banks_[$i]['state'], $i));
@@ -149,13 +149,6 @@ class GoogleMapsLocationCache extends CreateFileCache {
     }
 
     public function getCache() {
-
-                    try {
-                return $this->loadAndSave();
-            }
-            catch (Exception $e) {
-                return $e->getMessage();
-            }
         
         // Cast to int because we are returning a "boolean" integer from the method call.
         if ( (int)$this->IsTimeForUpdate() !== 1) {
